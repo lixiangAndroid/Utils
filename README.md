@@ -10,3 +10,5 @@
   SPUtil:     SharedPreferences封装类  
   
   TimeUtil:   时间工具类
+
+  NetWorkUtil:跟网络相关的工具类
