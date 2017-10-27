@@ -37,9 +37,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Long getLong(JSONObject jsonObject, String key, Long defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             return jsonObject.getLong(key);
@@ -64,10 +62,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Long getLong(String jsonData, String key, Long defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
-
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
             return getLong(jsonObject, key, defaultValue);
@@ -115,10 +110,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Integer getInt(JSONObject jsonObject, String key, Integer defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
-
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
         try {
             return jsonObject.getInt(key);
         } catch (JSONException e) {
@@ -142,9 +134,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Integer getInt(String jsonData, String key, Integer defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -193,9 +183,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Double getDouble(JSONObject jsonObject, String key, Double defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             return jsonObject.getDouble(key);
@@ -220,9 +208,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Double getDouble(String jsonData, String key, Double defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -271,9 +257,7 @@ public class JSONUtil {
      * </ul>
      */
     public static String getString(JSONObject jsonObject, String key, String defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             return jsonObject.getString(key);
@@ -298,9 +282,7 @@ public class JSONUtil {
      * </ul>
      */
     public static String getString(String jsonData, String key, String defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -327,9 +309,7 @@ public class JSONUtil {
      * </ul>
      */
     public static String getStringCascade(JSONObject jsonObject, String defaultValue, String... keyArray) {
-        if (jsonObject == null || keyArray == null || keyArray.length == 0) {
-            return defaultValue;
-        }
+        if (jsonObject == null || keyArray == null || keyArray.length == 0) return defaultValue;
 
         String data = jsonObject.toString();
         for (String key : keyArray) {
@@ -355,9 +335,7 @@ public class JSONUtil {
      * </ul>
      */
     public static String getStringCascade(String jsonData, String defaultValue, String... keyArray) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         String data = jsonData;
         for (String key : keyArray) {
@@ -384,9 +362,7 @@ public class JSONUtil {
      * </ul>
      */
     public static String[] getStringArray(JSONObject jsonObject, String key, String[] defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             JSONArray statusArray = jsonObject.getJSONArray(key);
@@ -419,9 +395,7 @@ public class JSONUtil {
      * </ul>
      */
     public static String[] getStringArray(String jsonData, String key, String[] defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -449,9 +423,7 @@ public class JSONUtil {
      * </ul>
      */
     public static List<String> getStringList(JSONObject jsonObject, String key, List<String> defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             JSONArray statusArray = jsonObject.getJSONArray(key);
@@ -484,9 +456,7 @@ public class JSONUtil {
      * </ul>
      */
     public static List<String> getStringList(String jsonData, String key, List<String> defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -513,9 +483,7 @@ public class JSONUtil {
      * </ul>
      */
     public static JSONObject getJSONObject(JSONObject jsonObject, String key, JSONObject defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             return jsonObject.getJSONObject(key);
@@ -540,9 +508,7 @@ public class JSONUtil {
      * </ul>
      */
     public static JSONObject getJSONObject(String jsonData, String key, JSONObject defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -569,9 +535,7 @@ public class JSONUtil {
      * </ul>
      */
     public static JSONObject getJSONObjectCascade(JSONObject jsonObject, JSONObject defaultValue, String... keyArray) {
-        if (jsonObject == null || keyArray == null || keyArray.length == 0) {
-            return defaultValue;
-        }
+        if (jsonObject == null || keyArray == null || keyArray.length == 0) return defaultValue;
 
         JSONObject js = jsonObject;
         for (String key : keyArray) {
@@ -597,9 +561,7 @@ public class JSONUtil {
      * </ul>
      */
     public static JSONObject getJSONObjectCascade(String jsonData, JSONObject defaultValue, String... keyArray) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -626,9 +588,7 @@ public class JSONUtil {
      * </ul>
      */
     public static JSONArray getJSONArray(JSONObject jsonObject, String key, JSONArray defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             return jsonObject.getJSONArray(key);
@@ -653,9 +613,7 @@ public class JSONUtil {
      * </ul>
      */
     public static JSONArray getJSONArray(String jsonData, String key, JSONArray defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -681,9 +639,7 @@ public class JSONUtil {
      * </ul>
      */
     public static boolean getBoolean(JSONObject jsonObject, String key, Boolean defaultValue) {
-        if (jsonObject == null || TextUtils.isEmpty(key)) {
-            return defaultValue;
-        }
+        if (jsonObject == null || TextUtils.isEmpty(key)) return defaultValue;
 
         try {
             return jsonObject.getBoolean(key);
@@ -708,9 +664,7 @@ public class JSONUtil {
      * </ul>
      */
     public static boolean getBoolean(String jsonData, String key, Boolean defaultValue) {
-        if (TextUtils.isEmpty(jsonData)) {
-            return defaultValue;
-        }
+        if (TextUtils.isEmpty(jsonData)) return defaultValue;
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -750,13 +704,8 @@ public class JSONUtil {
      * </ul>
      */
     public static Map<String, String> getMap(String jsonData, String key) {
-
-        if (jsonData == null) {
-            return null;
-        }
-        if (jsonData.length() == 0) {
-            return new HashMap<>();
-        }
+        if (jsonData == null) return null;
+        if (jsonData.length() == 0) return new HashMap<>();
 
         try {
             JSONObject jsonObject = new JSONObject(jsonData);
@@ -779,9 +728,7 @@ public class JSONUtil {
      */
     @SuppressWarnings("rawtypes")
     public static Map<String, String> parseKeyAndValueToMap(JSONObject sourceObj) {
-        if (sourceObj == null) {
-            return null;
-        }
+        if (sourceObj == null) return null;
 
         Map<String, String> keyAndValueMap = new HashMap<>();
         for (Iterator iter = sourceObj.keys(); iter.hasNext(); ) {
@@ -804,9 +751,7 @@ public class JSONUtil {
      * </ul>
      */
     public static Map<String, String> parseKeyAndValueToMap(String source) {
-        if (TextUtils.isEmpty(source)) {
-            return null;
-        }
+        if (TextUtils.isEmpty(source)) return null;
 
         try {
             JSONObject jsonObject = new JSONObject(source);
