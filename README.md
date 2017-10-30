@@ -14,3 +14,5 @@
   NetWorkUtil:跟网络相关的辅助工具类
 
   JSONUtil:   JSON相关辅助工具类
+  
+  ToastUtil:  Toast相关辅助工具类
