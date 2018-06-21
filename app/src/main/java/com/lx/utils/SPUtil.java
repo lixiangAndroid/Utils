@@ -67,6 +67,31 @@ public class SPUtil {
         return null;
     }
 
+    public static String getString(Context context, String key, String defaultObject) {
+        SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        return sp.getString(key, defaultObject);
+    }
+
+    public static boolean getBoolean(Context context, String key, boolean defaultObject) {
+        SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        return sp.getBoolean(key, defaultObject);
+    }
+
+    public static Integer getInt(Context context, String key, Integer defaultObject) {
+        SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        return sp.getInt(key, defaultObject);
+    }
+
+    public static Float getFloat(Context context, String key, Float defaultObject) {
+        SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        return sp.getFloat(key, defaultObject);
+    }
+
+    public static Long getLong(Context context, String key, Long defaultObject) {
+        SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        return sp.getLong(key, defaultObject);
+    }
+
     /**
      * 移除某个key值已经对应的值
      */
@@ -110,11 +135,11 @@ public class SPUtil {
     /**
      * 创建一个解决SharedPreferencesCompat.apply方法的一个兼容类
      * 对SharedPreference的使用做了建议的封装，对外公布出put，get，remove，clear等等方法；
-       注意一点，里面所有的commit操作使用了SharedPreferencesCompat.apply进行了替代，目的是尽可能的使用apply代替commit
-       首先说下为什么，因为commit方法是同步的，并且我们很多时候的commit操作都是UI线程中，毕竟是IO操作，尽可能异步；
-       所以我们使用apply进行替代，apply异步的进行写入；
-       但是apply相当于commit来说是new API呢，为了更好的兼容，我们做了适配；
-       SharedPreferencesCompat也可以给大家创建兼容类提供了一定的参考~~
+     * 注意一点，里面所有的commit操作使用了SharedPreferencesCompat.apply进行了替代，目的是尽可能的使用apply代替commit
+     * 首先说下为什么，因为commit方法是同步的，并且我们很多时候的commit操作都是UI线程中，毕竟是IO操作，尽可能异步；
+     * 所以我们使用apply进行替代，apply异步的进行写入；
+     * 但是apply相当于commit来说是new API呢，为了更好的兼容，我们做了适配；
+     * SharedPreferencesCompat也可以给大家创建兼容类提供了一定的参考~~
      */
     private static class SharedPreferencesCompat {
         private static final Method sApplyMethod = findApplyMethod();

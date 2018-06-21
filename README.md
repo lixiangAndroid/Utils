@@ -20,3 +20,7 @@
   ResourceUtil：资源文件的辅助工具类
   
   StringUtil:   String的辅助工具类
+  
+  ByteUtli:     字节数据与十六进制字符串的转换
+  
+  UpdateUtil:   版本检测更新
