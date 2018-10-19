@@ -24,3 +24,5 @@
   ByteUtli:     字节数据与十六进制字符串的转换
   
   UpdateUtil:   版本检测更新
+
+  SystemUtil:   系统工具类
