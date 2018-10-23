@@ -3,6 +3,7 @@ package com.lx.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -15,6 +16,17 @@ import android.view.WindowManager;
  */
 public class ScreenUtil {
     private ScreenUtil() {
+    }
+
+    /**
+     * 获得字体高度
+     *
+     * @param textPaint Paint
+     * @return 屏幕高度
+     */
+
+    public static float getTextHeight(Paint textPaint) {
+        return -textPaint.ascent() - textPaint.descent();
     }
 
     /**
